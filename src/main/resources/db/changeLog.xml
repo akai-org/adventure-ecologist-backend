@@ -11,57 +11,57 @@
         <ext:createCollection collectionName="GameState">
             <ext:options>
                 {
-                validator: {
-                $jsonSchema: {
-                bsonType: "object",
-                required: [
-                "email",
-                "lastLogin",
-                "treeCount",
-                "solarPanelCount",
-                "bicyclePathCount",
-                "secondHandCount",
-                "vegeBarCount",
-                "nuclearPowerPlantCount"
-                ],
-                properties: {
-                email: {
-                bsonType: "string",
-                description: "User email"
-                },
-                lastLogin: {
-                bsonType: "timestamp",
-                description: "User last login"
-                },
-                treeCount: {
-                bsonType: "long",
-                description: " count"
-                },
-                solarPanelCount: {
-                bsonType: "long",
-                description: " count"
-                },
-                bicyclePathCount: {
-                bsonType: "long",
-                description: " count"
-                },
-                secondHandCount: {
-                bsonType: "long",
-                description: " count"
-                },
-                vegeBarCount: {
-                bsonType: "long",
-                description: " count"
-                },
-                nuclearPowerPlantCount: {
-                bsonType: "long",
-                description: " count"
-                }
-                }
-                }
-                },
-                validationAction: "warn",
-                validationLevel: "strict"
+                    validator: {
+                        $jsonSchema: {
+                            bsonType: "object",
+                            required: [
+                                "email",
+                                "lastLogin",
+                                "treeCount",
+                                "solarPanelCount",
+                                "bicyclePathCount",
+                                "secondHandCount",
+                                "vegeBarCount",
+                                "nuclearPowerPlantCount"
+                            ],
+                            properties: {
+                                email: {
+                                    bsonType: "string",
+                                    description: "User email"
+                                },
+                                lastLogin: {
+                                    bsonType: "timestamp",
+                                    description: "User last login"
+                                },
+                                treeCount: {
+                                    bsonType: "long",
+                                    description: "Trees count"
+                                },
+                                solarPanelCount: {
+                                    bsonType: "long",
+                                    description: "Solar panels count"
+                                },
+                                bicyclePathCount: {
+                                    bsonType: "long",
+                                    description: "Bicycle paths count"
+                                },
+                                secondHandCount: {
+                                    bsonType: "long",
+                                    description: "Second-hands count"
+                                },
+                                vegeBarCount: {
+                                    bsonType: "long",
+                                    description: "Vege bars count"
+                                },
+                                nuclearPowerPlantCount: {
+                                    bsonType: "long",
+                                    description: "Nuclear power plants count"
+                                }
+                            }
+                        }
+                    },
+                    validationAction: "warn",
+                    validationLevel: "strict"
                 }
             </ext:options>
         </ext:createCollection>
