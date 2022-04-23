@@ -61,7 +61,7 @@
                                     description: "Nuclear power plants count"
                                 },
                                 balance: {
-                                    bsonType: "long",
+                                    bsonType: "double",
                                     description: "Money saldo"
                                 },
                                 multiplier: {
