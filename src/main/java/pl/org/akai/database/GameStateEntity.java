@@ -12,11 +12,13 @@ public class GameStateEntity {
     private ObjectId id;
     private String email;
     private Instant lastLogin;
-    private Integer treeCount;
-    private Integer solarPanelCount;
-    private Integer bicyclePathCount;
-    private Integer secondHandCount;
-    private Integer vegeBarCount;
-    private Integer nuclearPowerPlantCount;
+    private Long treeCount;
+    private Long solarPanelCount;
+    private Long bicyclePathCount;
+    private Long secondHandCount;
+    private Long vegeBarCount;
+    private Long nuclearPowerPlantCount;
+    private Long saldo;
+    private Long multiplier;
 
 }

@@ -22,7 +22,9 @@
                                 "bicyclePathCount",
                                 "secondHandCount",
                                 "vegeBarCount",
-                                "nuclearPowerPlantCount"
+                                "nuclearPowerPlantCount",
+                                "saldo",
+                                "multiplier"
                             ],
                             properties: {
                                 email: {
@@ -56,6 +58,14 @@
                                 nuclearPowerPlantCount: {
                                     bsonType: "long",
                                     description: "Nuclear power plants count"
+                                },
+                                saldo: {
+                                    bsonType: "long",
+                                    description: "Money saldo"
+                                },
+                                multiplier: {
+                                    bsonType: "long",
+                                    description: "Multiplier"
                                 }
                             }
                         }
