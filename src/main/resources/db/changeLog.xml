@@ -1,0 +1,69 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="Szczepaniak-M" id="202204231059">
+        <ext:createCollection collectionName="GameState">
+            <ext:options>
+                {
+                validator: {
+                $jsonSchema: {
+                bsonType: "object",
+                required: [
+                "email",
+                "lastLogin",
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f"
+                ],
+                properties: {
+                email: {
+                bsonType: "string",
+                description: "User email"
+                },
+                lastLogin: {
+                bsonType: "timestamp",
+                description: "User last login"
+                },
+                a: {
+                bsonType: "long",
+                description: " count"
+                },
+                b: {
+                bsonType: "long",
+                description: " count"
+                },
+                c: {
+                bsonType: "long",
+                description: " count"
+                },
+                d: {
+                bsonType: "long",
+                description: " count"
+                },
+                e: {
+                bsonType: "long",
+                description: " count"
+                },
+                f: {
+                bsonType: "long",
+                description: " count"
+                }
+                }
+                }
+                },
+                validationAction: "warn",
+                validationLevel: "strict"
+                }
+            </ext:options>
+        </ext:createCollection>
+    </changeSet>
+</databaseChangeLog>
