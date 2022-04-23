@@ -18,7 +18,7 @@ public class GameStateEntity {
     private Long secondHandCount;
     private Long vegeBarCount;
     private Long nuclearPowerPlantCount;
-    private Long saldo;
+    private Long balance;
     private Long multiplier;
 
 }

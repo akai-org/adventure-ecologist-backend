@@ -23,7 +23,7 @@
                                 "secondHandCount",
                                 "vegeBarCount",
                                 "nuclearPowerPlantCount",
-                                "saldo",
+                                "balance",
                                 "multiplier"
                             ],
                             properties: {
@@ -59,7 +59,7 @@
                                     bsonType: "long",
                                     description: "Nuclear power plants count"
                                 },
-                                saldo: {
+                                balance: {
                                     bsonType: "long",
                                     description: "Money saldo"
                                 },
