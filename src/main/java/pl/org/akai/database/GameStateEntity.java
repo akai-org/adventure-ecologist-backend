@@ -20,5 +20,6 @@ public class GameStateEntity {
     private Long nuclearPowerPlantCount;
     private Long balance;
     private Long multiplier;
+    private Long totalIncomePerSecond;
 
 }

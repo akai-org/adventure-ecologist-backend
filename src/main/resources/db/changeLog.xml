@@ -24,7 +24,8 @@
                                 "vegeBarCount",
                                 "nuclearPowerPlantCount",
                                 "balance",
-                                "multiplier"
+                                "multiplier",
+                                "totalIncomePerSecond"
                             ],
                             properties: {
                                 email: {
@@ -64,6 +65,10 @@
                                     description: "Money saldo"
                                 },
                                 multiplier: {
+                                    bsonType: "long",
+                                    description: "Multiplier"
+                                },
+                                totalIncomePerSecond: {
                                     bsonType: "long",
                                     description: "Multiplier"
                                 }
