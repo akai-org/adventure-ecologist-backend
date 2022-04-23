@@ -17,12 +17,12 @@
                 required: [
                 "email",
                 "lastLogin",
-                "a",
-                "b",
-                "c",
-                "d",
-                "e",
-                "f"
+                "treeCount",
+                "solarPanelCount",
+                "bicyclePathCount",
+                "secondHandCount",
+                "vegeBarCount",
+                "nuclearPowerPlantCount"
                 ],
                 properties: {
                 email: {
@@ -33,27 +33,27 @@
                 bsonType: "timestamp",
                 description: "User last login"
                 },
-                a: {
+                treeCount: {
                 bsonType: "long",
                 description: " count"
                 },
-                b: {
+                solarPanelCount: {
                 bsonType: "long",
                 description: " count"
                 },
-                c: {
+                bicyclePathCount: {
                 bsonType: "long",
                 description: " count"
                 },
-                d: {
+                secondHandCount: {
                 bsonType: "long",
                 description: " count"
                 },
-                e: {
+                vegeBarCount: {
                 bsonType: "long",
                 description: " count"
                 },
-                f: {
+                nuclearPowerPlantCount: {
                 bsonType: "long",
                 description: " count"
                 }

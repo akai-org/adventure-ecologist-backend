@@ -13,12 +13,12 @@ import javax.ws.rs.core.Response;
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-class EcologistController {
+class GameStateController {
 
     private final JsonWebToken token;
     private final GameStateRepository gameStateRepository;
 
-    EcologistController(JsonWebToken token, GameStateRepository gameStateRepository) {
+    GameStateController(JsonWebToken token, GameStateRepository gameStateRepository) {
         this.token = token;
         this.gameStateRepository = gameStateRepository;
     }
