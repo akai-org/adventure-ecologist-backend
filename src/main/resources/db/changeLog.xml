@@ -69,7 +69,7 @@
                                     description: "Multiplier"
                                 },
                                 totalIncomePerSecond: {
-                                    bsonType: "long",
+                                    bsonType: "double",
                                     description: "Multiplier"
                                 }
                             }
