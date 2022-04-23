@@ -31,9 +31,9 @@ class GameStateController {
         gameStateEntity.setEmail(token.getClaim("email"));
         gameStateEntity.setLastLogin(Instant.now());
         return gameStateRepository.persist(gameStateEntity)
-                .map(gameStatus -> Response.ok(gameStatus)
-                        .status(Response.Status.CREATED)
-                        .build());
+                                  .map(gameStatus -> Response.ok(gameStatus)
+                                                             .status(Response.Status.CREATED)
+                                                             .build());
     }
 
     @GET
@@ -41,8 +41,8 @@ class GameStateController {
     @Authenticated
     public Uni<Response> saveState() {
         return gameStateRepository.findByEmail(token.getClaim("email"))
-                .map(gameStatus -> Response.ok(gameStatus)
-                        .build());
+                                  .onItem().ifNotNull().transform(gameStatus -> Response.ok(gameStatus).build())
+                                  .onItem().ifNull().continueWith(Response.status(Response.Status.NOT_FOUND).build());
     }
 
 }
