@@ -7,7 +7,7 @@ import org.bson.types.ObjectId;
 import java.time.Instant;
 
 @Data
-@MongoEntity(collection="ThePerson")
+@MongoEntity(collection="GameState")
 public class GameStateEntity {
     private ObjectId id;
     private String email;

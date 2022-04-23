@@ -1,12 +1,16 @@
 package pl.org.akai;
 
 import io.quarkus.security.Authenticated;
+import io.smallrye.mutiny.Uni;
+import org.bson.types.ObjectId;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 import pl.org.akai.database.GameStateEntity;
 import pl.org.akai.database.GameStateRepository;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.SecurityContext;
 
 @Path("/api")
 @Produces(MediaType.APPLICATION_JSON)
@@ -20,25 +24,19 @@ class EcologistController {
         this.token = token;
         this.gameStateRepository = gameStateRepository;
     }
-
-
-    @GET
-    public String hello() {
-        return "Hello from RESTEasy Reactive";
-    }
-
-    @GET
-    @Path("/sec")
-    @Authenticated
-    public String secured() {
-        return "Authenticated to " + token.getClaim("email");
-    }
-
     @POST
     @Path("/state")
     @Authenticated
     public void saveState(GameStateEntity gameStateEntity) {
+        gameStateEntity.setEmail(token.getClaim("email"));
         gameStateRepository.persist(gameStateEntity);
+    }
+
+    @GET
+    @Path("/state")
+    @Authenticated
+    public Uni<GameStateEntity> saveState() {
+        return gameStateRepository.findByEmail(token.getClaim("email"));
     }
 
 }
